@@ -6,6 +6,6 @@ echo "::set-output name=time::$time"
 pwd
 ls -l
 whoami
-cd $HOME
+cd /home/cmsusr
 pwd
 ls -l
