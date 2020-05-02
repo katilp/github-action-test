@@ -21,3 +21,4 @@ echo "CMSSW_4_2_8 is at your service."
 #exec "$@"
 edmDumpEventContent root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root > evtdump.txt
 head evtdump.txt
+env
