@@ -7,4 +7,4 @@ FROM gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest
 COPY entrypoint.sh /home/cmsusr/entrypoint.sh
 
 # Executes `entrypoint.sh` when the Docker container starts up 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/home/cmsusr/entrypoint.sh"]
