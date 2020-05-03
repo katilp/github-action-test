@@ -26,7 +26,8 @@ ls -l
 echo "ls -l /github/workspace"
 ls -l /github/workspace
 whoami
-sudo chmod 0666 /github/workspace
+sudo chown -R cmsusr /github/workspace
+chmod 755 /github/workspace
 echo "ls -l /github/workspace"
 ls -l /github/workspace
 cp dump.txt /github/workspace
