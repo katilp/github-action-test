@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
-echo "Hello $1, this is $2"
 time=$(date)
 echo "::set-output name=time::$time"
 
@@ -21,7 +20,8 @@ eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
 #exec "$@"
-edmDumpEventContent root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root > evtdump.txt
+edmDumpEventContent $1 > evtdump.txt
 head evtdump.txt
+edmProvDump $1 > evtprovdump.txt
 echo "::set-output name=another_output::evtdump.txt"
 
