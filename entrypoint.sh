@@ -20,7 +20,7 @@ eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
 # giving up with this, it gives 'multiple occurences' like this or with just $1 and the input is the full command (???): $(echo $1) 
-edmDumpEventContent $3 > dump.txt
+edmProvDump --sort $3 > dump.txt
 head -10 dump.txt 
 # pass the filename as input next
 
