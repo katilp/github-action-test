@@ -1,11 +1,11 @@
 # action.yml
 name: 'Hello CMSSW'
-description: 'Greet someone and record the time'
+description: 'Inspect a file and return something'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  file-name:  # id of input
+    description: 'File name'
     required: true
-    default: 'World'
+    default: 'root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root'
   CMSSW_VERSION:  # id of input
     description: 'CMSSW version'
     required: true
@@ -19,5 +19,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.file-name }}
     - ${{ inputs.CMSSW_VERSION }}
