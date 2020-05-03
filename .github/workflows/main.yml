@@ -1,5 +1,5 @@
 on:
-  watch
+  watch:
     types: [started]
  #https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e
  
