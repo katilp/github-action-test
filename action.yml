@@ -17,11 +17,8 @@ outputs:
     description: 'Another output'
 runs:
   using: 'docker'
- # image: 'Dockerfile'
-  image: 'gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest'
+  image: 'Dockerfile'
+  # image: 'gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest'
   args:
-    - 'whoami'
-    - 'pwd'
-    - 'ls -l'
-   # - ${{ inputs.file-name }}
-   # - ${{ inputs.CMSSW_VERSION }}
+    - ${{ inputs.file-name }}
+    - ${{ inputs.CMSSW_VERSION }}
