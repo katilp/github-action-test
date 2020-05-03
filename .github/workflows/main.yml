@@ -17,6 +17,7 @@ jobs:
         id: hello
         with:
           who-to-greet: 'Kati'
+          CMSSW_VERSION: 'CMSSW_4_2_8'
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
