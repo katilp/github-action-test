@@ -12,7 +12,7 @@ This action pulls the slc5 container with the CMSSW_4_2_8 release are installed.
 
 ### `CMSSW_VERSION`
 
-**Required** The name of the file to inspect. Default `"CMSSW_4_2_8"`. Does not make much sense here as it is the only release arae available in the image...
+**Required**  Default `"CMSSW_4_2_8"`. Does not make much sense here as it is the only release arae available in the image...
 
 ## Outputs
 
