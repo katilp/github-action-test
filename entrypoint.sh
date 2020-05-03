@@ -19,7 +19,7 @@ cd $2/src
 eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
-$1
+$(echo $1)
 head -10 dump.txt 
 # pass the filename as input next
 
