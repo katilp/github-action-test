@@ -22,3 +22,4 @@ runs:
   args:
     - ${{ inputs.file-name }}
     - ${{ inputs.CMSSW_VERSION }}
+    - edmProvDump --sort ${{ inputs.file-name }} > dump.txt
