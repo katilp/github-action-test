@@ -21,7 +21,7 @@ jobs:
           file-name: 'root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root'
           CMSSW_VERSION: 'CMSSW_4_2_8'   
       - name: Upload artifact
-         uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v1
         with:
           name: output
           path: dump.txt        
