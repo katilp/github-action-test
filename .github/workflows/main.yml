@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: My test job
     steps:
-      # To use this repository's private action, you must check out the repository
+      # To use this repository's private action, you must check out the repository, v2 is part of the action name
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: In the container action step
         uses: ./ # Uses an action in the root directory
         id: hello
