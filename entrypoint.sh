@@ -22,6 +22,7 @@ echo "$2 is at your service."
 #exec "$@"
 edmDumpEventContent $1 > evtdump.txt
 head evtdump.txt
-edmProvDump $1 
+edmProvDump --sort $1 > provdump.txt
+head -100 provdump.txt
 echo "::set-output name=another_output::evtdump.txt"
 
