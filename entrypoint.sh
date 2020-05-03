@@ -26,7 +26,9 @@ ls -l
 echo "ls -l /github/workspace"
 ls -l /github/workspace
 whoami
-sudo chmod +w /github/workspace
+sudo chmod 0666 /github/workspace
+echo "ls -l /github/workspace"
+ls -l /github/workspace
 cp dump.txt /github/workspace
 head -10 dump.txt 
 echo $1
