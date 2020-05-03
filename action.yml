@@ -20,6 +20,7 @@ runs:
   image: 'Dockerfile'
   # image: 'gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest'
   args:
-    - ${{ inputs.file-name }}
-    - ${{ inputs.CMSSW_VERSION }}
     - edmProvDump --sort ${{ inputs.file-name }} > dump.txt
+    - ${{ inputs.CMSSW_VERSION }}
+    - ${{ inputs.file-name }}
+   
