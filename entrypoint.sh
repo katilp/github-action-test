@@ -19,7 +19,7 @@ cd $2/src
 eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
-exec "$@"
+#exec "$@"
 #edmDumpEventContent $1 > evtdump.txt
 #head evtdump.txt
 #edmProvDump --sort $1 > provdump.txt
