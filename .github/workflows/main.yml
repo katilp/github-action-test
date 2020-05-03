@@ -1,7 +1,7 @@
 on:
   watch:
     types: [started]
- #https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e
+ #https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e - run action on demand by starring the repo
  
 jobs:
   my_file_check:
@@ -19,4 +19,6 @@ jobs:
           who-to-greet: 'Kati'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "Kello on ${{ steps.hello.outputs.time }}"
+        run: |
+          echo "Kello on ${{ steps.hello.outputs.time }}"
+          echo "Log file name is ${{ steps.hello.outputs.another_output }}"
