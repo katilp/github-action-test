@@ -15,8 +15,8 @@ jobs:
       - name: In the container action step
         uses: ./ # Uses an action in the root directory
         id: hello
-        env: 
-          GITHUB_WORKSPACE: /home/cmsusr
+        #env:  Does not seem to have any effect, at least to the container workdir option, quotes or no
+        #  GITHUB_WORKSPACE: /home/cmsusr
         with:
           file-name: 'root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root'
           CMSSW_VERSION: 'CMSSW_4_2_8'
