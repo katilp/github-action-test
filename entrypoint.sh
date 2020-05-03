@@ -20,8 +20,8 @@ eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
 #exec "$@"
-edmDumpEventContent $1 > evtdump.txt
-head evtdump.txt
-edmProvDump $1 > evtprovdump.txt
+#edmDumpEventContent $1 > evtdump.txt
+#head evtdump.txt
+#edmProvDump $1 > evtprovdump.txt
 echo "::set-output name=another_output::evtdump.txt"
 
