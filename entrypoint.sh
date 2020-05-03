@@ -26,7 +26,7 @@ ls -l
 echo "ls -l /github/workspace"
 ls -l /github/workspace
 whoami
-su - cmsint
+su - cmsinst
 cp dump.txt /github/workspace
 head -10 dump.txt 
 echo $1
