@@ -24,9 +24,9 @@ edmDumpEventContent $1 > evtdump.txt
 head evtdump.txt
 edmProvDump --sort $1 > provdump.txt
 head -100 provdump.txt
-chmod ugo+rw /github/workspace
-chmod ugo+rw /github/home
-#mv provdump.txt /github/workspace
+
+su root
+mv provdump.txt /github/workspace
 ls -l 
 ls -l /github/workspace
 ls -l /github/home
