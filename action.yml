@@ -20,5 +20,8 @@ runs:
  # image: 'Dockerfile'
   image: 'gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest'
   args:
-    - ${{ inputs.file-name }}
-    - ${{ inputs.CMSSW_VERSION }}
+    - 'whoami'
+    - 'pwd'
+    - 'ls -l'
+   # - ${{ inputs.file-name }}
+   # - ${{ inputs.CMSSW_VERSION }}
