@@ -24,5 +24,6 @@ edmDumpEventContent $1 > evtdump.txt
 head evtdump.txt
 edmProvDump --sort $1 > provdump.txt
 head -100 provdump.txt
+mv provdump.txt /github/workspace
 echo "::set-output name=another_output::evtdump.txt"
 
