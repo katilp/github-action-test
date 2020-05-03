@@ -22,6 +22,8 @@ echo "$2 is at your service."
 # giving up with this, it gives 'multiple occurences' like this or with just $1 and the input is the full command (???): $(echo $1) 
 edmProvDump --sort $3 > dump.txt
 head -10 dump.txt 
+echo $1
+
 # pass the filename as input next
 
 #exec "$@"
