@@ -11,12 +11,12 @@ set  -e
 env
 
 #echo "Setting up ${CMSSW_VERSION}"
-echo "Setting up CMSSW_4_2_8"
+echo "Setting up $2"
 source /opt/cms/cmsset_default.sh
 #scramv1 project CMSSW ${CMSSW_VERSION}
 #cd ${CMSSW_VERSION}/src
-scramv1 project CMSSW CMSSW_4_2_8
-cd CMSSW_4_2_8/src
+scramv1 project CMSSW $2
+cd $2/src
 eval `scramv1 runtime -sh`
 echo "$2 is at your service."
 
