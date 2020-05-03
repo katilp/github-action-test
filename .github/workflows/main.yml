@@ -1,13 +1,13 @@
 on: [pull_request]
 
 jobs:
-  hello_world_job:
+  my_file_check:
     runs-on: ubuntu-latest
     name: My test job
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
       - name: In the container action step
         uses: ./ # Uses an action in the root directory
         id: hello
