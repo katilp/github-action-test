@@ -16,7 +16,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Kati'
+          file-name: 'root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root'
           CMSSW_VERSION: 'CMSSW_4_2_8'
       # Use the output from the `hello` step
       - name: Get the output time
