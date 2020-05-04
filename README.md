@@ -2,7 +2,7 @@
 
 From [Github actions instructions](https://help.github.com/en/actions/building-actions/creating-a-docker-container-action)
 
-This workflow uses an action to pull [the slc5 container with the CMSSW_4_2_8 release installed](https://gitlab.cern.ch/clange/cmssw-docker/container_registry), and to build another container on top of it. An OD file is inspected and an output file produced. It is passed ad an artifact. 
+This workflow uses an action to pull [the slc5 container with the CMSSW_4_2_8 release installed](https://gitlab.cern.ch/clange/cmssw-docker/container_registry), and to build another container on top of it. An OD file is inspected and an output file produced. It is passed as an artifact. 
 
 Because of the default volume mount and home directory settings for the `docker run` command in github actions the following changes were required:
  - change to `/home/cmsusr` before building the CMSSW release area in Entrypoint
