@@ -15,8 +15,6 @@ jobs:
       - name: In the container action step
         uses: ./ # Uses an action in the root directory
         id: hello
-        #env:  Does not seem to have any effect, at least to the container workdir option, quotes or no
-        #  GITHUB_WORKSPACE: /home/cmsusr
         with:
           file-name: 'root://eospublic.cern.ch//eos/opendata/cms/hidata/HIRun2011/HIHighPt/RECO/15Apr2013-v1/110000/10EF1D2D-77B4-E211-A652-003048F1C494.root'
           CMSSW_VERSION: 'CMSSW_4_2_8'   
@@ -24,9 +22,9 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: output
-          path: dump.txt        
+          path: ${{ steps.hello.outputs.another_output }}       
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
-          echo "Kello on ${{ steps.hello.outputs.time }}"
+          echo "The time is ${{ steps.hello.outputs.time }}"
           echo "Log file name is ${{ steps.hello.outputs.another_output }}"
