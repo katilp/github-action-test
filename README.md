@@ -28,10 +28,10 @@ The time of the run (just a trial).
 
 ### `another_output`
 
-Another trial.
+Output file name. 
 
 ## Artifacts
 
-The output of edmProvDump on the input file.
+The output of edmProvDump.
 
 
