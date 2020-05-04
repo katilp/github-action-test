@@ -1,5 +1,5 @@
 # action.yml
-name: 'Hello CMSSW'
+name: 'Github action test with CMSSW docker container'
 description: 'Inspect a file and return something'
 inputs:
   file-name:  # id of input
@@ -12,7 +12,7 @@ inputs:
     default: 'CMSSW_4_2_8'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'Time'
   another_output: # id of output
     description: 'Another output'
 runs:
@@ -20,7 +20,7 @@ runs:
   image: 'Dockerfile'
   # image: 'gitlab-registry.cern.ch/clange/cmssw-docker/cmssw_4_2_8:latest'
   args:
-    - edmProvDump --sort ${{ inputs.file-name }} > dump.txt
-    - ${{ inputs.CMSSW_VERSION }}
     - ${{ inputs.file-name }}
+    - ${{ inputs.CMSSW_VERSION }}
+  
    
