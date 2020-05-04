@@ -2,7 +2,11 @@
 
 From [Github actions instructions](https://help.github.com/en/actions/building-actions/creating-a-docker-container-action)
 
-This action pulls the slc5 container with the CMSSW_4_2_8 release are installed. The action is triggered by the owner starring the repo.
+This workflow uses an action to pull [the slc5 container with the CMSSW_4_2_8 release installed](https://gitlab.cern.ch/clange/cmssw-docker/container_registry), and build another container on top of it. An OD file is inspected and an output file produced. It is passed ad an artifact. Because of the default volume mount and home directory settings of github actions the following changes were required:
+ - change to `/home/cmsusr` before building the CMSSW release area
+ - change owner to `cmsusr` for `/github/worspace` so that the output file can be passed as an artifact
+
+The action is triggered by the owner starring the repo.
 
 ## Inputs
 
@@ -23,5 +27,9 @@ The time of the run (just a trial).
 ### `another_output`
 
 Another trial.
+
+## Artifacts
+
+The output of edmProvDump on the input file.
 
 
