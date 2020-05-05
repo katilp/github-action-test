@@ -3,6 +3,8 @@
 time=$(date)
 echo "::set-output name=time::$time"
 
+pwd
+env
 cd /home/cmsusr
 
 set  -e

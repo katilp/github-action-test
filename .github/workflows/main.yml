@@ -12,8 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set env
-        run:
+        run: |
           echo "::set-env name=GITHUB_WORKSPACE::/home/cmsusr"
+          env
+      - name: Check env
+        run: env
       - name: In the container action step
         uses: ./ # Uses an action in the root directory
         id: hello
