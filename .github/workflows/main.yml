@@ -1,12 +1,11 @@
 on:
-  watch:
-    types: [started]
- #https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e - run action on demand by starring the repo
- 
+ pull_request:
+   branches: 
+     - master
 jobs:
   my_file_check:
     runs-on: ubuntu-latest
-    if: github.actor == github.event.repository.owner.login
+  #  if: github.actor == github.event.repository.owner.login
     name: My test job
     steps:
       # To use this repository's private action, you must check out the repository, v2 is part of the action name
