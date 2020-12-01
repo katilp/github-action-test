@@ -6,7 +6,7 @@ jobs:
   my_file_check:
     runs-on: ubuntu-latest
   #  if: github.actor == github.event.repository.owner.login
-    name: My test job
+    name: My test job - 2010 
     steps:
       # To use this repository's private action, you must check out the repository, v2 is part of the action name
       - name: Checkout
